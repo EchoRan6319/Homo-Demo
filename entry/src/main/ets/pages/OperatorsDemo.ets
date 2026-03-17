@@ -49,7 +49,7 @@ struct OperatorsDemo {
     }
     .width('100%')
     .height('100%')
-    .backgroundColor('#F3F6FB')
+    .backgroundColor($r('app.color.demo_bg_page'))
     .expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])
   }
 
@@ -59,21 +59,21 @@ struct OperatorsDemo {
       Text('运算符可视化演示')
         .fontSize(24)
         .fontWeight(FontWeight.Bold)
-        .fontColor('#1A2333')
+        .fontColor($r('app.color.demo_text_primary'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
       Text('先看每个卡片的“原理说明”，再修改输入并观察结果。')
         .fontSize(13)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(20)
         .width('100%')
 
       Row({ space: 8 }) {
         Button('运行全部演示')
           .type(ButtonType.Capsule)
-          .backgroundColor('#0B6BEE')
-          .fontColor('#FFFFFF')
+          .backgroundColor($r('app.color.demo_accent_primary'))
+          .fontColor($r('app.color.demo_on_accent'))
           .onClick(() => {
             this.runAll();
           })
@@ -83,7 +83,7 @@ struct OperatorsDemo {
     }
     .width('100%')
     .padding(16)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -93,7 +93,7 @@ struct OperatorsDemo {
       Text('算数运算符')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -113,19 +113,20 @@ struct OperatorsDemo {
       }
 
       Button('演示 + - * / %')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runArithmetic();
         })
 
       Text(this.arithmeticResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -135,7 +136,7 @@ struct OperatorsDemo {
       Text('字符串运算符')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -155,19 +156,20 @@ struct OperatorsDemo {
       }
 
       Button('演示字符串拼接')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runString();
         })
 
       Text(this.stringResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -177,7 +179,7 @@ struct OperatorsDemo {
       Text('赋值运算符')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -189,19 +191,20 @@ struct OperatorsDemo {
         })
 
       Button('演示 = += -= *= /=')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runAssignment();
         })
 
       Text(this.assignmentResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -211,7 +214,7 @@ struct OperatorsDemo {
       Text('比较运算符')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -219,7 +222,7 @@ struct OperatorsDemo {
 
       Text('字符串组（按字符串字典序比较）')
         .fontSize(13)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .width('100%')
 
       Row({ space: 8 }) {
@@ -237,7 +240,7 @@ struct OperatorsDemo {
 
       Text('数字组（先转 number 再比较）')
         .fontSize(13)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .width('100%')
 
       Row({ space: 8 }) {
@@ -254,19 +257,20 @@ struct OperatorsDemo {
       }
 
       Button('演示 == === > < >= <=')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runComparison();
         })
 
       Text(this.comparisonResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -276,7 +280,7 @@ struct OperatorsDemo {
       Text('逻辑运算符')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -294,21 +298,24 @@ struct OperatorsDemo {
           })
           .layoutWeight(1)
       }
+      .width('100%')
+      .justifyContent(FlexAlign.Center)
 
       Button('演示 && || !')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runLogic();
         })
 
       Text(this.logicResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -318,7 +325,7 @@ struct OperatorsDemo {
       Text('三元运算符')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -330,19 +337,20 @@ struct OperatorsDemo {
         })
 
       Button('演示 condition ? A : B')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runTernary();
         })
 
       Text(this.ternaryResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -352,7 +360,7 @@ struct OperatorsDemo {
       Text('数据类型检测运算符')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -364,19 +372,20 @@ struct OperatorsDemo {
         })
 
       Button('演示 typeof / instanceof')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runTypeCheck();
         })
 
       Text(this.typeCheckResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -386,26 +395,27 @@ struct OperatorsDemo {
       Text('运算符优先级')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
       this.principleNote('先乘除后加减，逻辑与高于逻辑或；括号可以显式改变执行顺序。')
 
       Button('演示优先级差异')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runPriority();
         })
 
       Text(this.priorityResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -424,7 +434,7 @@ struct OperatorsDemo {
   private principleNote(content: string) {
     Text(`原理说明：${content}`)
       .fontSize(12)
-      .fontColor('#6A7892')
+      .fontColor($r('app.color.demo_text_hint'))
       .lineHeight(18)
       .width('100%')
   }
@@ -618,6 +628,12 @@ struct OperatorsDemo {
     });
   }
 }
+
+
+
+
+
+
 
 
 

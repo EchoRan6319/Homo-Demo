@@ -36,7 +36,7 @@ struct FunctionsDemo {
     }
     .width('100%')
     .height('100%')
-    .backgroundColor('#F3F6FB')
+    .backgroundColor($r('app.color.demo_bg_page'))
     .expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])
   }
 
@@ -46,21 +46,21 @@ struct FunctionsDemo {
       Text('函数可视化演示')
         .fontSize(24)
         .fontWeight(FontWeight.Bold)
-        .fontColor('#1A2333')
+        .fontColor($r('app.color.demo_text_primary'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
       Text('函数用于封装可复用逻辑，重点理解“输入参数 -> 处理 -> 输出结果”。')
         .fontSize(13)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(20)
         .width('100%')
 
       Row({ space: 8 }) {
         Button('运行全部演示')
           .type(ButtonType.Capsule)
-          .backgroundColor('#0B6BEE')
-          .fontColor('#FFFFFF')
+          .backgroundColor($r('app.color.demo_accent_primary'))
+          .fontColor($r('app.color.demo_on_accent'))
           .onClick(() => {
             this.runAll();
           })
@@ -70,7 +70,7 @@ struct FunctionsDemo {
     }
     .width('100%')
     .padding(16)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -80,7 +80,7 @@ struct FunctionsDemo {
       Text('认识函数')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -88,7 +88,7 @@ struct FunctionsDemo {
 
       Text('函数是“可复用的代码块”，输入参数后会产出结果。')
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
 
@@ -98,19 +98,20 @@ struct FunctionsDemo {
         })
 
       Button('执行示例函数')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runKnowFunction();
         })
 
       Text(this.knowFunctionResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -120,7 +121,7 @@ struct FunctionsDemo {
       Text('自定义函数')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -140,19 +141,20 @@ struct FunctionsDemo {
       }
 
       Button('执行自定义面积函数')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runCustomFunction();
         })
 
       Text(this.customFunctionResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -162,7 +164,7 @@ struct FunctionsDemo {
       Text('将函数作为值使用')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -174,19 +176,20 @@ struct FunctionsDemo {
         })
 
       Button('演示函数变量与回调')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runFunctionAsValue();
         })
 
       Text(this.functionAsValueResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -196,7 +199,7 @@ struct FunctionsDemo {
       Text('箭头函数')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -208,19 +211,20 @@ struct FunctionsDemo {
         })
 
       Button('演示 map / filter / reduce')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runArrowFunction();
         })
 
       Text(this.arrowFunctionResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -230,7 +234,7 @@ struct FunctionsDemo {
       Text('常用内置函数')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -242,19 +246,20 @@ struct FunctionsDemo {
         })
 
       Button('演示 parseInt / parseFloat / Math')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runBuiltInFunctions();
         })
 
       Text(this.builtInFunctionResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -270,7 +275,7 @@ struct FunctionsDemo {
   private principleNote(content: string) {
     Text(`原理说明：${content}`)
       .fontSize(12)
-      .fontColor('#6A7892')
+      .fontColor($r('app.color.demo_text_hint'))
       .lineHeight(18)
       .width('100%')
   }
@@ -399,6 +404,11 @@ struct FunctionsDemo {
     });
   }
 }
+
+
+
+
+
 
 
 

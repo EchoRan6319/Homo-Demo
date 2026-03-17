@@ -1,8 +1,44 @@
-{
+﻿{
   "color": [
     {
       "name": "start_window_background",
       "value": "#FFFFFF"
+    },
+    {
+      "name": "demo_bg_page",
+      "value": "#F3F6FB"
+    },
+    {
+      "name": "demo_bg_card",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "demo_text_primary",
+      "value": "#1A2333"
+    },
+    {
+      "name": "demo_text_heading",
+      "value": "#1D2D44"
+    },
+    {
+      "name": "demo_text_secondary",
+      "value": "#52607A"
+    },
+    {
+      "name": "demo_text_hint",
+      "value": "#6A7892"
+    },
+    {
+      "name": "demo_accent_primary",
+      "value": "#0B6BEE"
+    },
+    {
+      "name": "demo_on_accent",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "demo_text_info",
+      "value": "#1B4A8A"
     }
   ]
 }

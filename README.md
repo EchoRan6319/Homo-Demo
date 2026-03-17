@@ -4,7 +4,7 @@
 ![ArkTS](https://img.shields.io/badge/Language-ArkTS-2563EB)
 ![ArkUI](https://img.shields.io/badge/UI-ArkUI-1D4ED8)
 ![API](https://img.shields.io/badge/API-6.0.2(22)-16A34A)
-![License](https://img.shields.io/badge/License-MIT-F59E0B)
+![License](https://img.shields.io/badge/License-GPLv3-F59E0B)
 
 鸿蒙 Next（HarmonyOS NEXT）ArkTS 入门教学 Demo。
 
@@ -165,4 +165,5 @@ Homo-Demo
 
 ## License
 
-本项目遵循仓库中的 [LICENSE](LICENSE)。
+本项目采用 GNU General Public License v3.0（GPL-3.0），详见 [LICENSE](LICENSE)。
+

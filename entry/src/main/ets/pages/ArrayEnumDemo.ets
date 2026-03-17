@@ -35,7 +35,7 @@ struct ArrayEnumDemo {
     }
     .width('100%')
     .height('100%')
-    .backgroundColor('#F3F6FB')
+    .backgroundColor($r('app.color.demo_bg_page'))
     .expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])
   }
 
@@ -45,21 +45,21 @@ struct ArrayEnumDemo {
       Text('数组和枚举可视化演示')
         .fontSize(24)
         .fontWeight(FontWeight.Bold)
-        .fontColor('#1A2333')
+        .fontColor($r('app.color.demo_text_primary'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
       Text('数组用于有序数据处理，枚举用于表达有限状态。')
         .fontSize(13)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(20)
         .width('100%')
 
       Row({ space: 8 }) {
         Button('运行全部演示')
           .type(ButtonType.Capsule)
-          .backgroundColor('#0B6BEE')
-          .fontColor('#FFFFFF')
+          .backgroundColor($r('app.color.demo_accent_primary'))
+          .fontColor($r('app.color.demo_on_accent'))
           .onClick(() => {
             this.resetArrayByText();
             this.runArrayDemo();
@@ -71,7 +71,7 @@ struct ArrayEnumDemo {
     }
     .width('100%')
     .padding(16)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -81,7 +81,7 @@ struct ArrayEnumDemo {
       Text('数组演示')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -109,6 +109,8 @@ struct ArrayEnumDemo {
           })
           .layoutWeight(1)
       }
+      .width('100%')
+      .justifyContent(FlexAlign.Center)
 
       Row({ space: 8 }) {
         Button('shift 删除首项')
@@ -122,25 +124,28 @@ struct ArrayEnumDemo {
           })
           .layoutWeight(1)
       }
+      .width('100%')
+      .justifyContent(FlexAlign.Center)
 
       Button('综合演示数组操作')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runArrayDemo();
         })
 
       Text(`当前数组：${this.arrayData.join(', ')}`)
         .fontSize(14)
-        .fontColor('#1B4A8A')
+        .fontColor($r('app.color.demo_text_info'))
         .width('100%')
       Text(this.arrayResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -150,7 +155,7 @@ struct ArrayEnumDemo {
       Text('枚举演示')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -170,6 +175,8 @@ struct ArrayEnumDemo {
           })
           .layoutWeight(1)
       }
+      .width('100%')
+      .justifyContent(FlexAlign.Center)
 
       Row({ space: 8 }) {
         Button('进阶')
@@ -185,16 +192,18 @@ struct ArrayEnumDemo {
           })
           .layoutWeight(1)
       }
+      .width('100%')
+      .justifyContent(FlexAlign.Center)
 
       Text(this.enumResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -202,7 +211,7 @@ struct ArrayEnumDemo {
   private principleNote(content: string) {
     Text(`原理说明：${content}`)
       .fontSize(12)
-      .fontColor('#6A7892')
+      .fontColor($r('app.color.demo_text_hint'))
       .lineHeight(18)
       .width('100%')
   }
@@ -324,6 +333,12 @@ struct ArrayEnumDemo {
     });
   }
 }
+
+
+
+
+
+
 
 
 

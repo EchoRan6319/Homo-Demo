@@ -30,7 +30,7 @@ struct FlowControlDemo {
     }
     .width('100%')
     .height('100%')
-    .backgroundColor('#F3F6FB')
+    .backgroundColor($r('app.color.demo_bg_page'))
     .expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])
   }
 
@@ -40,21 +40,21 @@ struct FlowControlDemo {
       Text('流程控制可视化演示')
         .fontSize(24)
         .fontWeight(FontWeight.Bold)
-        .fontColor('#1A2333')
+        .fontColor($r('app.color.demo_text_primary'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
       Text('流程控制决定“代码何时执行、执行几次、在何处退出”。')
         .fontSize(13)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(20)
         .width('100%')
 
       Row({ space: 8 }) {
         Button('运行全部演示')
           .type(ButtonType.Capsule)
-          .backgroundColor('#0B6BEE')
-          .fontColor('#FFFFFF')
+          .backgroundColor($r('app.color.demo_accent_primary'))
+          .fontColor($r('app.color.demo_on_accent'))
           .onClick(() => {
             this.runSelection();
             this.runLoop();
@@ -66,7 +66,7 @@ struct FlowControlDemo {
     }
     .width('100%')
     .padding(16)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -76,7 +76,7 @@ struct FlowControlDemo {
       Text('选择结构（if / else / switch）')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -96,19 +96,20 @@ struct FlowControlDemo {
       }
 
       Button('演示选择结构')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runSelection();
         })
 
       Text(this.selectionResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -118,7 +119,7 @@ struct FlowControlDemo {
       Text('循环结构（for / while / do...while）')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -130,19 +131,20 @@ struct FlowControlDemo {
         })
 
       Button('演示循环结构')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runLoop();
         })
 
       Text(this.loopResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -152,7 +154,7 @@ struct FlowControlDemo {
       Text('跳转语句（break / continue）')
         .fontSize(19)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1D2D44')
+        .fontColor($r('app.color.demo_text_heading'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
@@ -164,19 +166,20 @@ struct FlowControlDemo {
         })
 
       Button('演示跳转语句')
+      .alignSelf(ItemAlign.End)
         .onClick(() => {
           this.runJump();
         })
 
       Text(this.jumpResult)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
     }
     .width('100%')
     .padding(14)
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -184,7 +187,7 @@ struct FlowControlDemo {
   private principleNote(content: string) {
     Text(`原理说明：${content}`)
       .fontSize(12)
-      .fontColor('#6A7892')
+      .fontColor($r('app.color.demo_text_hint'))
       .lineHeight(18)
       .width('100%')
   }
@@ -318,6 +321,11 @@ struct FlowControlDemo {
     });
   }
 }
+
+
+
+
+
 
 
 

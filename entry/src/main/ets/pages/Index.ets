@@ -14,13 +14,13 @@ struct Index {
         Text('鸿蒙 ArkTS 学习 Demo')
           .fontSize(28)
           .fontWeight(FontWeight.Bold)
-          .fontColor('#1A2333')
+          .fontColor($r('app.color.demo_text_primary'))
           .width('100%')
           .textAlign(TextAlign.Start)
 
         Text('通过可视化交互演示：运算符、流程控制、数组与枚举、函数。')
           .fontSize(15)
-          .fontColor('#4A5568')
+          .fontColor($r('app.color.demo_text_secondary'))
           .width('100%')
           .lineHeight(24)
 
@@ -52,7 +52,7 @@ struct Index {
     }
     .width('100%')
     .height('100%')
-    .backgroundColor('#F3F6FB')
+    .backgroundColor($r('app.color.demo_bg_page'))
     .expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])
   }
 
@@ -62,17 +62,18 @@ struct Index {
       Text(title)
         .fontSize(21)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1A2333')
+        .fontColor($r('app.color.demo_text_primary'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
       Text(desc)
         .fontSize(14)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .lineHeight(22)
         .width('100%')
 
       Button('进入演示')
+      .alignSelf(ItemAlign.End)
         .type(ButtonType.Capsule)
         .fontSize(15)
         .onClick(() => {
@@ -81,7 +82,7 @@ struct Index {
     }
     .padding(16)
     .width('100%')
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -91,29 +92,29 @@ struct Index {
       Text('学习说明')
         .fontSize(18)
         .fontWeight(FontWeight.Medium)
-        .fontColor('#1A2333')
+        .fontColor($r('app.color.demo_text_primary'))
         .width('100%')
         .textAlign(TextAlign.Start)
 
       Text('1. 先看“原理说明”，理解该语法解决什么问题。')
         .fontSize(13)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .width('100%')
         .lineHeight(20)
       Text('2. 修改输入并点击按钮，观察结果如何变化。')
         .fontSize(13)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .width('100%')
         .lineHeight(20)
       Text('3. 用“运行全部演示”快速串联知识点。')
         .fontSize(13)
-        .fontColor('#52607A')
+        .fontColor($r('app.color.demo_text_secondary'))
         .width('100%')
         .lineHeight(20)
     }
     .padding(14)
     .width('100%')
-    .backgroundColor('#FFFFFF')
+    .backgroundColor($r('app.color.demo_bg_card'))
     .borderRadius(16)
   }
 
@@ -131,6 +132,11 @@ struct Index {
     });
   }
 }
+
+
+
+
+
 
 
 

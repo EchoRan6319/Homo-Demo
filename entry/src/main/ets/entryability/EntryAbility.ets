@@ -1,4 +1,4 @@
-import { AbilityConstant, ConfigurationConstant, UIAbility, Want } from '@kit.AbilityKit';
+﻿import { AbilityConstant, ConfigurationConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
@@ -61,9 +61,7 @@ export default class EntryAbility extends UIAbility {
       });
       mainWindow.setWindowSystemBarProperties({
         statusBarColor: '#00000000',
-        navigationBarColor: '#00000000',
-        statusBarContentColor: '#1A2333',
-        navigationBarContentColor: '#1A2333'
+        navigationBarColor: '#00000000'
       }).catch((err: BusinessError) => {
         hilog.error(DOMAIN, 'testTag', 'setWindowSystemBarProperties failed: %{public}s', JSON.stringify(err));
       });
@@ -72,3 +70,5 @@ export default class EntryAbility extends UIAbility {
     }
   }
 }
+
+
