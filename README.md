@@ -101,26 +101,6 @@ Homo-Demo
 └─ oh-package.json5
 ```
 
-## 界面预览
-
-建议在仓库新增截图目录：`docs/images/`，并放入以下文件：
-
-- `docs/images/home.png`
-- `docs/images/operators.png`
-- `docs/images/flow-control.png`
-- `docs/images/array-enum.png`
-- `docs/images/functions.png`
-
-然后在 README 中启用：
-
-```markdown
-![首页](docs/images/home.png)
-![运算符页](docs/images/operators.png)
-![流程控制页](docs/images/flow-control.png)
-![数组与枚举页](docs/images/array-enum.png)
-![函数页](docs/images/functions.png)
-```
-
 ## UI 与安全区说明
 
 项目已包含沉浸式相关处理：
